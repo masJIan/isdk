@@ -1,0 +1,26 @@
+{
+  "name"        : "mkharla/isdk",
+  "description" : "Instagram SDK",
+  "license"     : "MIT",
+  "authors"     : [
+    {
+      "name"  : "Mykhailo Kharlanov",
+      "email" : "mykhailo.kharlanov@gmail.com"
+    }
+  ],
+  "require"     : {
+    "guzzlehttp/guzzle"         : "^6.2"
+  },
+  "require-dev" : {
+    "phpunit/phpunit"           : "4.0.*",
+    "squizlabs/php_codesniffer" : "2.*"
+  },
+  "scripts"     : {
+    "phpcs"   : "vendor/bin/phpcs --encoding=utf8 --standard=ruleset.xml src/ tests/ examples/ config/"
+  },
+  "autoload"    : {
+    "psr-4"   : {
+      "mkharla\\isdk\\": "src"
+    }
+  }
+}
