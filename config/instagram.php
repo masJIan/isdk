@@ -55,7 +55,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | SDK should be implemented using poor PHP (5.6 / 7 , without any frameworks)
-    | I was not sure about using guzzlehttp/guzzle, so I made 2 options you ca chose here:
+    | I was not sure about using guzzlehttp/guzzle, so I made 2 options you can choose here:
     |
     |   vendor - guzzlehttp/guzzle
     |   custom - self made
