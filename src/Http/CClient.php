@@ -18,7 +18,7 @@ class CClient implements IClient
      */
     public function getMethod(string $url, array $query): array
     {
-        return $this->makeCall('get',$url . '?' . http_build_query($query));
+        return $this->makeCall($url . '?' . http_build_query($query), 'get');
     }
 
     /**
@@ -30,7 +30,7 @@ class CClient implements IClient
      */
     public function postMethod(string $url, array $query): array
     {
-        return $this->makeCall('post', $url, $query);
+        return $this->makeCall($url, 'post', $query);
     }
 
     /**
@@ -42,18 +42,18 @@ class CClient implements IClient
      */
     public function deleteMethod(string $url, array $query): array
     {
-        return $this->makeCall('delete',$url . '?' . http_build_query($query));
+        return $this->makeCall($url . '?' . http_build_query($query), 'delete');
     }
 
     /**
      * Curl Request builder
      *
-     * @param string $method
      * @param string $url
+     * @param string $method
      * @param array $params
      * @return array
      */
-    private function makeCall(string $method = 'get', string $url, array $params = []): array
+    private function makeCall(string $url, string $method = 'get', array $params = []): array
     {
         $curl       = curl_init();
         $options    = [
@@ -76,8 +76,7 @@ class CClient implements IClient
 
         $result = curl_exec($curl);
 
-        if(curl_errno($curl))
-        {
+        if (curl_errno($curl)) {
             $error = curl_error($curl);
             return is_array($error) ? $error : (array) $error;
         }
