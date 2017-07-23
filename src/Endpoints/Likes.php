@@ -21,7 +21,7 @@ class Likes
     private $client;
 
     /**
-     * User constructor.
+     * Likes constructor.
      *
      * @param array $config
      * @param IClient $client

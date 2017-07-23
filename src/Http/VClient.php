@@ -67,6 +67,8 @@ class VClient implements IClient
     }
 
     /**
+     * DELETE method request handler
+     *
      * @param string $url
      * @param array $query
      * @return array

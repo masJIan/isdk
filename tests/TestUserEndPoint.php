@@ -31,9 +31,9 @@ class TestUserEndPoint extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Check the instance of User EndPoint.
+     * Check instance.
      */
-    public function testUserInstance(): void
+    public function testInstance(): void
     {
         $this->assertInstanceOf(User::class, $this->user);
     }

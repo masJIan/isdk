@@ -4,11 +4,11 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use mkharla\isdk\InstagramSDK;
 
-$name = 'mykhailo';
-$code = 'c80142a86ba44596aea4c571a668ff28';
-$userId = 5765505425;
-$mediaId = '1564445074136647591_5765505425';
-$mediaShortName = 'BW2BoGShken';
+$name           = 'your-name-here';
+$code           = 'your-code-here';
+$userId         = 1;
+$mediaId        = 'media-id';
+$mediaShortName = 'media-short-name';
 
 $sdk = new InstagramSDK();
 
@@ -43,6 +43,6 @@ $sdk = new InstagramSDK();
 
 //print_r($sdk->likes()->getAllLikesOnMedia($mediaId));
 //print_r($sdk->likes()->setOnMedia($mediaId));
-//print_r($sdk->likes()->deleteFromMedia(sadas));
+//print_r($sdk->likes()->deleteFromMedia($mediaId));
 
 die;

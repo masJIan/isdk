@@ -21,7 +21,7 @@ class Media
     private $client;
 
     /**
-     * User constructor.
+     * Media constructor.
      *
      * @param array $config
      * @param IClient $client

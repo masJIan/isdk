@@ -53,18 +53,15 @@ class Auth
     }
 
     /**
-     *  Get access token by code
+     * Get access token by code
      *
      * @param string $code
-     * @param string $access_token
      * @return array
      */
-    public function getAccessToken(string $code, string $access_token = ''): array
+    public function getAccessToken(string $code): array
     {
-        $access_token = strlen($access_token) > 0 ? $access_token : $this->config['access_token'];
-
         return strlen($code) > 0 ? $this->client->postMethod(
-            $access_token,
+            $this->config['access_token_url'],
             [
                 'client_id'     =>  $this->config['client']['id'],
                 'client_secret' =>  $this->config['client']['secret'],
