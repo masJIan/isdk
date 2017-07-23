@@ -6,7 +6,7 @@ use mkharla\isdk\Http\IClient;
 
 /**
  * Class Media
- * @package mkharla\isdk\Providers
+ * @package mkharla\isdk\Endpoints
  */
 class Media
 {

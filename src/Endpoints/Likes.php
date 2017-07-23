@@ -6,7 +6,7 @@ use mkharla\isdk\Http\IClient;
 
 /**
  * Class Likes
- * @package mkharla\isdk\Providers
+ * @package mkharla\isdk\Endpoints
  */
 class Likes
 {

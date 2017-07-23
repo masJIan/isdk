@@ -6,7 +6,7 @@ use mkharla\isdk\Http\IClient;
 
 /**
  * Class User
- * @package mkharla\isdk\Providers
+ * @package mkharla\isdk\Endpoints
  */
 class User
 {
@@ -92,16 +92,19 @@ class User
      *
      * @param string $name
      * @param int $count
+     * @param string $access_token
      * @return array
      */
-    public function findByName(string $name, int $count = 5): array
+    public function findByName(string $name, int $count = 5, string $access_token = ''): array
     {
+        $access_token = strlen($access_token) > 0 ? $access_token : $this->config['access_token'];
+
         return strlen($name) > 0 ? $this->client->getMethod(
             $this->config['api_url'] . '/users/search',
             [
                 'q'             =>  $name,
                 'count'         =>  $count,
-                'access_token'  =>  $this->config['access_token']
+                'access_token'  =>  $access_token
             ]
         ) : [];
     }

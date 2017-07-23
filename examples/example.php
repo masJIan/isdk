@@ -4,13 +4,13 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use mkharla\isdk\InstagramSDK;
 
-$sdk = new InstagramSDK();
-
 $name = 'mykhailo';
-$code = '38f9de106d8b4b06b8cde4cb1f088ffa';
+$code = 'c80142a86ba44596aea4c571a668ff28';
 $userId = 5765505425;
 $mediaId = '1564445074136647591_5765505425';
 $mediaShortName = 'BW2BoGShken';
+
+$sdk = new InstagramSDK();
 
 /*
  * Auth section

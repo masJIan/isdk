@@ -10,7 +10,7 @@ use mkharla\isdk\Endpoints\Media;
 use mkharla\isdk\Endpoints\User;
 
 /**
- * Class InstagramSDK
+ * Class InstagramSDK Factory
  * @package mkharla\isdk
  */
 class InstagramSDK
@@ -30,7 +30,7 @@ class InstagramSDK
      */
     public function __construct()
     {
-        $this->config = include_once(__DIR__ . '/../config/instagram.php');
+        $this->config = include(__DIR__ . '/../config/instagram.php');
 
         switch ($this->config['http_client']) {
             case 'vendor':
